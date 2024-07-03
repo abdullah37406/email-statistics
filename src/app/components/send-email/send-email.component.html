@@ -1,1 +1,213 @@
+<div class="container">
+  <div class="card mb-3">
+    <div class="card-header">Email Tracking Stats</div>
+    <div class="dashboard">
+      <div class="dashboard-item">
+        <h1>{{ this.data.total ?? 0 }}</h1>
+        <h4>Total</h4>
+      </div>
+      <div class="dashboard-item">
+        <h1>{{ this.data.open ?? 0 }}</h1>
+        <h4>Opens</h4>
+      </div>
+      <div class="dashboard-item">
+        <h1>{{ this.data.clicked ?? 0 }}</h1>
+        <h4>Clicks</h4>
+      </div>
+      <!-- <div class="dashboard-item">
+        <h1>{{ this.data.unsubscribe ?? 0 }}</h1>
+        <h4>Unsubscribes</h4>
+      </div>
+      <div class="dashboard-item">
+        <h1>{{ this.data.complaints ?? 0 }}</h1>
+        <h4>Complaints</h4>
+      </div> -->
+      <div class="dashboard-item">
+        <h1>{{ this.data.bounce ?? 0 }}</h1>
+        <h4>Bounces</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="card detail-stats">
+    <div class="row" style="width: 100%">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="d-flex justify-content-between">
+          <span class="rate-title">Clicks Rate</span>
+          <span class="rate-value">0%</span>
+        </div>
+
+        <div class="progress">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            style="width: 0%"
+            aria-valuenow="81"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+
+        <div class="details">
+          <div class="single-detail">
+            <span> Unique Clicks </span>
+            <span>0 / 0%</span>
+          </div>
+          <div class="single-detail">
+            <span> Totals Clicks </span>
+            <span>0 / 0%</span>
+          </div>
+          <div class="single-detail">
+            <span> Clicks to opens Rate </span>
+            <span>0%</span>
+          </div>
+          <div class="single-detail">
+            <span> Clicks through Rate </span>
+            <span>0%</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="d-flex justify-content-between">
+          <span class="rate-title">Opens Rate</span>
+          <span class="rate-value">8.1%</span>
+        </div>
+        <div class="progress">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            style="width: 8.1%"
+            aria-valuenow="8.1"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+        <div class="details">
+            <div class="single-detail">
+              <span> Unique Clicks </span>
+              <span>0 / 0%</span>
+            </div>
+            <div class="single-detail">
+              <span> Totals Clicks </span>
+              <span>0 / 0%</span>
+            </div>
+            <div class="single-detail">
+              <span> Clicks to opens Rate </span>
+              <span>0%</span>
+            </div>
+            <div class="single-detail">
+              <span> Clicks through Rate </span>
+              <span>0%</span>
+            </div>
+          </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="d-flex justify-content-between">
+          <span class="rate-title">Bounce Rate</span>
+          <span class="rate-value">81%</span>
+        </div>
+        <div class="progress">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            style="width: 81%"
+            aria-valuenow="81"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+        <div class="details">
+            <div class="single-detail">
+              <span> Unique Clicks </span>
+              <span>0 / 0%</span>
+            </div>
+            <div class="single-detail">
+              <span> Totals Clicks </span>
+              <span>0 / 0%</span>
+            </div>
+            <div class="single-detail">
+              <span> Clicks to opens Rate </span>
+              <span>0%</span>
+            </div>
+            <div class="single-detail">
+              <span> Clicks through Rate </span>
+              <span>0%</span>
+            </div>
+          </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="d-flex justify-content-between">
+          <span class="rate-title">Clicks Rate</span>
+          <span class="rate-value">81%</span>
+        </div>
+
+        <div class="progress">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            style="width: 81%"
+            aria-valuenow="81"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+
+        <div class="details">
+          <div class="single-detail">
+            <span> Unique Clicks </span>
+            <span>0 / 0%</span>
+          </div>
+          <div class="single-detail">
+            <span> Totals Clicks </span>
+            <span>0 / 0%</span>
+          </div>
+          <div class="single-detail">
+            <span> Clicks to opens Rate </span>
+            <span>0%</span>
+          </div>
+          <div class="single-detail">
+            <span> Clicks through Rate </span>
+            <span>0%</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="d-flex justify-content-between">
+          <span class="rate-title">Clicks Rate</span>
+          <span class="rate-value">51%</span>
+        </div>
+
+        <div class="progress">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            style="width: 51%"
+            aria-valuenow="51"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+
+        <div class="details">
+          <div class="single-detail">
+            <span> Unique Clicks </span>
+            <span>0 / 0%</span>
+          </div>
+          <div class="single-detail">
+            <span> Totals Clicks </span>
+            <span>0 / 0%</span>
+          </div>
+          <div class="single-detail">
+            <span> Clicks to opens Rate </span>
+            <span>0%</span>
+          </div>
+          <div class="single-detail">
+            <span> Clicks through Rate </span>
+            <span>0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>
 <button (click)="sendEmail()">Send Email</button>

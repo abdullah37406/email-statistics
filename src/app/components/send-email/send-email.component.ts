@@ -11,10 +11,19 @@ export class SendEmailComponent implements OnInit {
     subject: 'subject',
     body: 'body'
   };
+  data={
+    total:0,
+    bounce:0,
+    open:0,
+    clicked:0,
+    unsubscribe:0,
+    complaints:0,
+  }
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+   this.getStats()
   }
 
   sendEmail() {
@@ -26,9 +35,26 @@ export class SendEmailComponent implements OnInit {
       .subscribe(response => {
         console.log(response);
         alert('Email sent successfully!');
+        this.getStats()
       }, error => {
         console.error(error);
         alert('Error sending email!');
       });
+  }
+
+  getStats(){
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+
+    this.http.get('http://localhost:3000/api/get-statistics', { headers: headers })
+      .subscribe((response:any) => {
+        this.data=response
+        console.log(response);
+      }, error => {
+        console.error(error);
+        alert('Error getting email data!');
+      });
+
   }
 }
